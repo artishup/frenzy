@@ -11,4 +11,4 @@
 |
 */
 
-$router->get('/', 'Prime\Presentation\Http\Controllers\AliveController@alive');
+$router->get('/', 'Frenzy\Presentation\Http\Controllers\AliveController@alive');

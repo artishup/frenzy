@@ -1,6 +1,6 @@
 <?php
 
-namespace Prime\Presentation\Http\Controllers;
+namespace Frenzy\Presentation\Http\Controllers;
 
 use Shared\Presentation\Http\Controllers\Controller;
 
@@ -9,6 +9,6 @@ class AliveController extends Controller
 
     public function alive()
     {
-        return response('I am Optimus Prime, leader of the autobots.', 200);
+        return response('Megatron! Megatron! Megatron! ...Stupid insects tried to kill me!', 200);
     }
 }

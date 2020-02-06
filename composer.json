@@ -1,7 +1,7 @@
 {
-    "name": "artishup/prime",
-    "description": "Hexagonal Architecture Skeleton",
-    "keywords": ["artishup", "hexagonal", "lumen"],
+    "name": "artishup/frenzy",
+    "description": "Notification Service",
+    "keywords": ["artishup", "hexagonal", "lumen", "notification"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -20,7 +20,7 @@
         ],
         "psr-4": {
             "Shared\\": "src/Shared",
-            "Prime\\": "src/Prime"
+            "Frenzy\\": "src/Frenzy"
         }
     },
     "autoload-dev": {

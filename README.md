@@ -1,1 +1,1 @@
-# Prime - Hexagonal Architecture Skeleton
+# Frenzy - Notification Service
