@@ -11,4 +11,8 @@
 |
 */
 
-//$router->get('/', 'Frenzy\Core\Presentation\Http\Controllers\AliveController@alive');
+$router->group(['namespace' => 'Frenzy\Core\Presentation\Http\Controllers'], function() use ($router) {
+    $router->get('/', 'AliveController@alive');
+});
+
+

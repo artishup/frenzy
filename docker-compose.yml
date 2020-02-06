@@ -27,7 +27,7 @@ services:
     build: docker/php
     volumes:
       - ./:/var/www/html
-    working_dir: /var/www/html/app/public
+    working_dir: /var/www/html
     command: php-fpm
     links:
       - db:db

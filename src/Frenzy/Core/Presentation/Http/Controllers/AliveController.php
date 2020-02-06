@@ -1,6 +1,6 @@
 <?php
 
-namespace Frenzy\Presentation\Http\Controllers;
+namespace Frenzy\Core\Presentation\Http\Controllers;
 
 use Shared\Presentation\Http\Controllers\Controller;
 
