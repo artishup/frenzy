@@ -8,10 +8,10 @@ use Frenzy\Mail\Domain\ValueObject\Subject;
 
 class Mail
 {
-    private $subject;
-    private $sender;
-    private $recipient;
-    private $body;
+    private Subject $subject;
+    private Email $sender;
+    private Recipient $recipient;
+    private Body $body;
 
     private function __construct(
         Subject $subject,
