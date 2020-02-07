@@ -2,7 +2,7 @@
 
 namespace Frenzy\Mail\Domain\ValueObject;
 
-class Email
+class Name
 {
     private string $value;
 
@@ -18,7 +18,6 @@ class Email
 
     private function setValue(string $value): void
     {
-        //Validate email pattern
         $this->value = $value;
     }
 

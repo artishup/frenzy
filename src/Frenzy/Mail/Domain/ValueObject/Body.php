@@ -2,7 +2,7 @@
 
 namespace Frenzy\Mail\Domain\ValueObject;
 
-class Name
+class Body
 {
     private string $value;
 

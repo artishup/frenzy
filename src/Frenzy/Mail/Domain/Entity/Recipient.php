@@ -1,26 +1,27 @@
 <?php
 
-namespace Frenzy\Mail\Domain;
+namespace Frenzy\Mail\Domain\Entity;
 
+use Frenzy\Mail\Domain\ValueObject\Name;
 use Frenzy\Mail\Domain\ValueObject\Email;
 
 class Recipient
 {
-    private string $name;
+    private Name $name;
     private Email $email;
 
-    private function __construct(string $name, Email $email)
+    private function __construct(Name $name, Email $email)
     {
         $this->name = $name;
         $this->email = $email;
     }
 
-    public static function create(string $name, Email $email): self
+    public static function create(Name $name, Email $email): self
     {
         return new self($name, $email);
     }
 
-    public function name(): string
+    public function name(): Name
     {
         return $this->name;
     }
@@ -33,7 +34,7 @@ class Recipient
     public function toArray(): array
     {
         return [
-            'name'  => $this->name(),
+            'name'  => $this->name()->value(),
             'email' => $this->email()->value()
         ];
     }

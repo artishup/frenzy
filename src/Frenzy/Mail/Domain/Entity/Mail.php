@@ -1,7 +1,8 @@
 <?php
 
-namespace Frenzy\Mail\Domain;
+namespace Frenzy\Mail\Domain\Entity;
 
+use Frenzy\Mail\Domain\ValueObject\Body;
 use Frenzy\Mail\Domain\ValueObject\Email;
 use Frenzy\Mail\Domain\ValueObject\Subject;
 
@@ -10,13 +11,13 @@ class Mail
     private Subject $subject;
     private Email $sender;
     private Recipient $recipient;
-    private string $body;
+    private Body $body;
 
     private function __construct(
         Subject $subject,
         Email $sender,
         Recipient $recipient,
-        string $body
+        Body $body
     ) {
         $this->subject = $subject;
         $this->sender = $sender;
@@ -28,7 +29,7 @@ class Mail
         Subject $subject,
         Email $sender,
         Recipient $recipient,
-        string $body
+        Body $body
     ): self {
         return new self($subject, $sender, $recipient, $body);
     }
@@ -38,7 +39,7 @@ class Mail
         return $this->subject;
     }
 
-    public function senderl(): Email
+    public function sender(): Email
     {
         return $this->sender;
     }
