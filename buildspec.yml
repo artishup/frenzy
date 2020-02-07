@@ -1,24 +1,19 @@
 version: 0.2
 phases:
   install:
+    runtime-versions:
+      php: 7.4
     commands:
       - echo Install
+      - php -v
       - |
           export DEBIAN_FRONTEND=noninteractive
           apt-get update
           apt-get install -y software-properties-common
           LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
           apt-get update
-          # Install PHP
-          apt-get install -y php7.4\
-                php7.4-mbstring \
-                php7.4-mcrypt \
-                php7.4-curl \
-                unzip
-          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-          php composer-setup.php ;
-          php -r "unlink('composer-setup.php');" ;
-          mv composer.phar /usr/local/bin/composer
+          apt-get install -y php7.4-cli
+      - php -v
   build:
     commands:
       - echo Build started on `date`
