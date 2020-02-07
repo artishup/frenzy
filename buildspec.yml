@@ -1,5 +1,14 @@
-version: 0.1
+version: 0.2
 phases:
-  pre_build:
+  install:
+    run-as: ubuntu
     commands:
-      - composer install
+      - echo Install
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Installing composer deps
+      - composer install --no-progress --no-suggest
+  post_build:
+    commands:
+      - echo Build completed on `date`
