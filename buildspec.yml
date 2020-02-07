@@ -4,14 +4,6 @@ phases:
     commands:
       - echo Install
       - php -v
-      - |
-          export DEBIAN_FRONTEND=noninteractive
-          apt-get update
-          apt-get install -y software-properties-common
-          LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-          apt-get update
-          apt-get install -y php7.4-cli
-      - php -v
   build:
     commands:
       - echo Build started on `date`

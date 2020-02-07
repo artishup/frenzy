@@ -4,7 +4,7 @@ namespace Frenzy\Mail\Domain\ValueObject;
 
 class Email
 {
-    private string $value;
+    private $value;
 
     private function __construct(string $value)
     {

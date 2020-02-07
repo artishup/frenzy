@@ -7,8 +7,8 @@ use Frenzy\Mail\Domain\ValueObject\Email;
 
 class Recipient
 {
-    private Name $name;
-    private Email $email;
+    private $name;
+    private $email;
 
     private function __construct(Name $name, Email $email)
     {
