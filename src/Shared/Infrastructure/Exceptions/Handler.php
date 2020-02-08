@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Exceptions;
+namespace ArtishUp\Shared\Infrastructure\Exceptions;
 
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
