@@ -4,23 +4,9 @@ declare(strict_types = 1);
 
 namespace ArtishUp\Shared\Domain\Aggregate;
 
-use ArtishUp\Shared\Domain\Bus\Event\DomainEvent;
+use ArtishUp\Shared\Domain\Entity\Entity;
 
-abstract class AggregateRoot
+abstract class AggregateRoot extends Entity
 {
-    private $domainEvents = [];
 
-    final public function pullDomainEvents(): array
-    {
-        $domainEvents = $this->domainEvents;
-
-        $this->domainEvents = [];
-
-        return $domainEvents;
-    }
-
-    final protected function record(DomainEvent $domainEvent): void
-    {
-        $this->domainEvents[] = $domainEvent;
-    }
 }

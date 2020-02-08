@@ -9,7 +9,8 @@
         "aws/aws-sdk-php-laravel": "^3.4",
         "lambdish/phunctional": "^2.0",
         "laravel/lumen-framework": "^6.0",
-        "ramsey/uuid": "^3.9"
+        "ramsey/uuid": "^3.9",
+        "ext-json": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",

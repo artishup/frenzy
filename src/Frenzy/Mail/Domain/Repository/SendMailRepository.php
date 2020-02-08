@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ArtishUp\Frenzy\Mail\Domain\Repository;
 
-use Frenzy\Mail\Domain\Entity\Mail;
+use ArtishUp\Frenzy\Mail\Domain\Entity\Mail;
 
 interface SendMailRepository
 {

@@ -13,6 +13,8 @@ abstract class StringValueObject
         $this->value = $value;
     }
 
+    public static abstract function create(string $value);
+
     public function value(): string
     {
         return $this->value;

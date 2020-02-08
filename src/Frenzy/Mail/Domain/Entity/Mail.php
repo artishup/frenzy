@@ -1,12 +1,13 @@
 <?php
 
-namespace Frenzy\Mail\Domain\Entity;
+namespace ArtishUp\Frenzy\Mail\Domain\Entity;
 
-use Frenzy\Mail\Domain\ValueObject\Body;
-use Frenzy\Mail\Domain\ValueObject\Email;
-use Frenzy\Mail\Domain\ValueObject\Subject;
+use ArtishUp\Frenzy\Mail\Domain\ValueObject\Body;
+use ArtishUp\Frenzy\Mail\Domain\ValueObject\Email;
+use ArtishUp\Frenzy\Mail\Domain\ValueObject\Subject;
+use ArtishUp\Shared\Domain\Aggregate\AggregateRoot;
 
-class Mail
+final class Mail extends AggregateRoot
 {
     private Subject $subject;
     private Email $sender;
@@ -52,5 +53,10 @@ class Mail
     public function body(): string
     {
         return $this->body;
+    }
+
+    public function toArray(): array
+    {
+        return [];
     }
 }
