@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Presentation\Http\Controllers;
+namespace ArtishUp\Shared\Presentation\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 

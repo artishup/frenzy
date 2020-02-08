@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Providers;
+namespace ArtishUp\Shared\Infrastructure\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

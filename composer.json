@@ -22,9 +22,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "ArtishUp\\": "src",
-            "Shared\\": "src/Shared",
-            "Frenzy\\": "src/Frenzy"
+            "ArtishUp\\": "src"
         }
     },
     "autoload-dev": {

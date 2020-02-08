@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Shared Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
@@ -11,7 +11,7 @@
 |
 */
 
-$router->group(['namespace' => 'Frenzy\Core\Presentation\Http\Controllers'], function() use ($router) {
+$router->group(['namespace' => 'ArtishUp\Shared\Presentation\Http\Controllers'], function() use ($router) {
     $router->get('/', 'AliveController@alive');
 });
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace ArtishUp\Shared\Presentation\Http\Middleware;
 
 use Closure;
 

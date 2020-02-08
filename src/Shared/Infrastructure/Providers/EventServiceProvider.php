@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Providers;
+namespace ArtishUp\Shared\Infrastructure\Providers;
 
 use Laravel\Lumen\Providers\EventServiceProvider as ServiceProvider;
 
@@ -12,8 +12,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        \Shared\Infrastructure\Events\ExampleEvent::class => [
-            \Shared\Infrastructure\Listeners\ExampleListener::class,
+        \ArtishUp\Shared\Infrastructure\Events\ExampleEvent::class => [
+            \ArtishUp\Shared\Infrastructure\Listeners\ExampleListener::class,
         ],
     ];
 }

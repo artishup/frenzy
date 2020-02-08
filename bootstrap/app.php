@@ -92,7 +92,7 @@ $app->singleton(
 */
 
 $app->router->group([], function ($router) {
-    require __DIR__.'/../src/Frenzy/Core/Presentation/Http/routes.php';
+    require __DIR__. '/../src/Shared/Presentation/Http/routes.php';
 });
 
 return $app;

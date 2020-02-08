@@ -1,8 +1,7 @@
 <?php
 
-namespace Shared\Infrastructure\Providers;
+namespace ArtishUp\Shared\Infrastructure\Providers;
 
-use Shared\Domain\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 

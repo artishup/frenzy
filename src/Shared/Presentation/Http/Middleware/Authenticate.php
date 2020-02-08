@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Presentation\Http\Middleware;
+namespace ArtishUp\Shared\Presentation\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;

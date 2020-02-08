@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Listeners;
+namespace ArtishUp\Shared\Infrastructure\Listeners;
 
 use Shared\Infrastructure\Events\ExampleEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;

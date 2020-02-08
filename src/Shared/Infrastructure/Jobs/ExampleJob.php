@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Jobs;
+namespace ArtishUp\Shared\Infrastructure\Jobs;
 
 class ExampleJob extends Job
 {

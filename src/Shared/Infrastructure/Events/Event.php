@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Infrastructure\Events;
+namespace ArtishUp\Shared\Infrastructure\Events;
 
 use Illuminate\Queue\SerializesModels;
 

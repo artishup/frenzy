@@ -11,8 +11,7 @@ use function Lambdish\Phunctional\each;
 
 abstract class Collection implements Countable, IteratorAggregate
 {
-    /** @var array */
-    private $items;
+    private array $items;
 
     public function __construct(array $items)
     {
