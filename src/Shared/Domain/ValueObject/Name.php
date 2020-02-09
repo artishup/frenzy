@@ -1,8 +1,6 @@
 <?php
 
-namespace ArtishUp\Frenzy\Mail\Domain\ValueObject;
-
-use ArtishUp\Shared\Domain\ValueObject\StringValueObject;
+namespace ArtishUp\Shared\Domain\ValueObject;
 
 class Name extends StringValueObject
 {

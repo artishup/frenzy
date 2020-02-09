@@ -2,22 +2,23 @@
 
 namespace ArtishUp\Frenzy\Mail\Domain\Entity;
 
-use ArtishUp\Frenzy\Mail\Domain\ValueObject\Body;
-use ArtishUp\Frenzy\Mail\Domain\ValueObject\Email;
-use ArtishUp\Frenzy\Mail\Domain\ValueObject\Subject;
+use ArtishUp\Shared\Domain\ValueObject\Email;
 use ArtishUp\Shared\Domain\Aggregate\AggregateRoot;
+use ArtishUp\Frenzy\Mail\Domain\ValueObject\Body;
+use ArtishUp\Frenzy\Contact\Domain\Entity\Contact;
+use ArtishUp\Frenzy\Mail\Domain\ValueObject\Subject;
 
 final class Mail extends AggregateRoot
 {
     private Subject $subject;
     private Email $sender;
-    private Recipient $recipient;
+    private Contact $recipient;
     private Body $body;
 
     private function __construct(
         Subject $subject,
         Email $sender,
-        Recipient $recipient,
+        Contact $recipient,
         Body $body
     ) {
         $this->subject = $subject;
@@ -29,7 +30,7 @@ final class Mail extends AggregateRoot
     public static function create(
         Subject $subject,
         Email $sender,
-        Recipient $recipient,
+        Contact $recipient,
         Body $body
     ): self {
         return new self($subject, $sender, $recipient, $body);
@@ -45,7 +46,7 @@ final class Mail extends AggregateRoot
         return $this->sender;
     }
 
-    public function recipient(): Recipient
+    public function recipient(): Contact
     {
         return $this->recipient;
     }

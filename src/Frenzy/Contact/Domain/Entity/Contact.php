@@ -1,12 +1,12 @@
 <?php
 
-namespace ArtishUp\Frenzy\Mail\Domain\Entity;
+namespace ArtishUp\Frenzy\Contact\Domain\Entity;
 
 use ArtishUp\Shared\Domain\Entity\Entity;
-use ArtishUp\Frenzy\Mail\Domain\ValueObject\Name;
-use ArtishUp\Frenzy\Mail\Domain\ValueObject\Email;
+use ArtishUp\Shared\Domain\ValueObject\Email;
+use ArtishUp\Shared\Domain\ValueObject\Name;
 
-final class Recipient extends Entity
+final class Contact extends Entity
 {
     private Name $name;
     private Email $email;
