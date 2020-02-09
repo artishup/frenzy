@@ -7,7 +7,6 @@ use Aws\Sns\Message;
 use Illuminate\Http\Request;
 use Aws\Sns\MessageValidator;
 use Aws\Sns\Exception\InvalidSnsMessageException;
-use Illuminate\Support\Facades\Log;
 
 class AwsSnsMiddleware
 {
