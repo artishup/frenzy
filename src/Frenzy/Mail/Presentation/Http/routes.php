@@ -12,7 +12,7 @@
 */
 
 $router->group(['namespace' => 'ArtishUp\Frenzy\Mail\Presentation\Http\Controllers'], function() use ($router) {
-    $router->post('order', 'OrderController@order');
+    $router->post('order', ['middleware' => 'aws-sns', 'uses' => 'OrderController@order']);
 });
 
 
