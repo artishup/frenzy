@@ -13,7 +13,9 @@ class OrderController extends Controller
 
     public function order(Request $request)
     {
-        Log::debug('Message received', $request->get('message'));
+        $message = $request->get('message');
+
+        Log::debug('Message received', $message);
 
         return response('Message received', 200);
     }
