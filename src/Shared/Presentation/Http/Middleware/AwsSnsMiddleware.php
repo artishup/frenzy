@@ -4,32 +4,40 @@ namespace ArtishUp\Shared\Presentation\Http\Middleware;
 
 use Closure;
 use Aws\Sns\Message;
-use Illuminate\Http\Request;
 use Aws\Sns\MessageValidator;
 use Aws\Sns\Exception\InvalidSnsMessageException;
 
 class AwsSnsMiddleware
 {
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        $message = Message::fromRawPostData();
-
-        $validator = new MessageValidator();
-
         try {
-            $validator->validate($message);
-        } catch (InvalidSnsMessageException $e) {
-            return response('SNS Message Validation Error: ' . $e->getMessage(), 404);
-        }
+            $message = Message::fromRawPostData();
 
-        if ($message['Type'] === 'SubscriptionConfirmation') {
-            file_get_contents($message['SubscribeURL']);
-            return response('Subscription Confirmed', 200);
-        } elseif ($message['Type'] === 'Notification') {
-            $request->request->add([
-                'subject' => $message['Subject'],
-                'message' => json_decode($message['Message'], true),
-            ]);
+            if (getenv('APP_ENV') == 'production') {
+                $validator = new MessageValidator();
+
+                try {
+                    $validator->validate($message);
+                } catch (InvalidSnsMessageException $e) {
+                    return response('SNS Message Validation Error: ' . $e->getMessage(), 404);
+                }
+            }
+
+            if (isset($message['Type']) && $message['Type'] === 'SubscriptionConfirmation') {
+                file_get_contents($message['SubscribeURL']);
+
+                return response('Subscription Confirmed', 200);
+            }
+
+            if (isset($message['Type']) && $message['Type'] === 'Notification') {
+                $request->request->add([
+                    'subject' => $message['Subject'],
+                    'message' => json_decode($message['Message'], true),
+                ]);
+            }
+        } catch (\Exception $e) {
+            //
         }
 
         return $next($request);
